@@ -1,0 +1,2 @@
+[console_scripts]
+merra2_downloader = irradpy.downloader.socket:main

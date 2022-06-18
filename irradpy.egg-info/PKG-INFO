@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: irradpy
+Version: 1.5.0
+Summary: Download tool for MERRA2 dataset for Clear Sky Model.
+Home-page: https://github.com/BXYMartin/Python-irradpy
+Author: Jamie Bright, Yue Zhang, Martin Bai
+Author-email: jamiebright1@gmail.com
+License: MIT Licence
+Keywords: MERRA2,Clear Sky Model,Solar Energy
+Platform: any
+License-File: LICENSE
+
+This is a automated tool for MERRA2 data collection and filtering, for the analysis of Clear Sky Model.
+
