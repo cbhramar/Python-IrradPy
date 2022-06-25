@@ -108,6 +108,10 @@ class SocketManager:
             merra_stream = "200"
         elif date.year < 2011:
             merra_stream = "300"
+        elif date.year == 2020 and date.month == 9:
+            merra_stream = "401"
+        elif date.year == 2021 and (date.month > 5 and date.month < 11):
+            merra_stream = "401"
 
         if merra2_collection["collection"].startswith("const"):
             merra_stream = "101"
@@ -643,7 +647,8 @@ class SocketManager:
                 if not merra2_var_dicts:
                     merra2_var_dict = var_list[collection_name]
                 else:
-                    merra2_var_dict = merra2_var_dicts[i]
+                    merra2_var_dict = merra2_var_dicts[collection_name]
+                    # merra2_var_dict = merra2_var_dicts[i]
                 # Download subdaily files
                 # Translate the coordinates that define your area to grid coordinates.
                 lat_coord_1 = self.translate_lat_to_geos5_native(lat_1)
@@ -695,7 +700,8 @@ class SocketManager:
                 if not merra2_var_dicts:
                     merra2_var_dict = var_list[collection_name]
                 else:
-                    merra2_var_dict = merra2_var_dicts[i]
+                    merra2_var_dict = merra2_var_dicts[collection_name]
+                    # merra2_var_dict = merra2_var_dicts[i]
                 if not merra2_var_dict["collection"].startswith("const"):
                     merge_collection_names.append(collection_name)
 
