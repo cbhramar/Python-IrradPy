@@ -29,7 +29,6 @@ from typing import Union
 from .variables import var_list
 
 class SocketManager:
-    deff4 = "h"
     deff4 = netCDF4.default_fillvals["f4"]
 
     global_retry = True
@@ -648,7 +647,6 @@ class SocketManager:
                     merra2_var_dict = var_list[collection_name]
                 else:
                     merra2_var_dict = merra2_var_dicts[collection_name]
-                    # merra2_var_dict = merra2_var_dicts[i]
                 # Download subdaily files
                 # Translate the coordinates that define your area to grid coordinates.
                 lat_coord_1 = self.translate_lat_to_geos5_native(lat_1)
@@ -701,7 +699,6 @@ class SocketManager:
                     merra2_var_dict = var_list[collection_name]
                 else:
                     merra2_var_dict = merra2_var_dicts[collection_name]
-                    # merra2_var_dict = merra2_var_dicts[i]
                 if not merra2_var_dict["collection"].startswith("const"):
                     merge_collection_names.append(collection_name)
 
