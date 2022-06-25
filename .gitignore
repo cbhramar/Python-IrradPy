@@ -1,0 +1,7 @@
+build/
+dist/
+irradpy/.DS_Store
+irradpy/__pycache__
+irradpy/downloader/__pycache__
+irradpy/extractor/__pycache__
+irradpy/model/__pycache__
